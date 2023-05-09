@@ -1,0 +1,359 @@
+﻿mon_trait_test = {
+	
+	# >>>[DEFINITION]:
+	education = no			# Trait d'éducation
+	physical = yes			# Trait physique
+	personality = no		# Trait de personnalité
+	lifestyle = no			# Trait de mode de vie
+	fame = no				# Trait de réputation
+	health_trait = no		# Trait de santé
+	childhood = no			# Trait d'enfance
+	commander = no			# Trait de commandant
+	court_type_trait = no	# Trait du type de Cour
+	
+	good = yes				# Considéré comme un bon trait : marks this trait as good (default no) 
+
+#	group = ex.: education_intrigue
+#	level = ex.: 1
+#	group_equivalence = depressed	# Groupe et niveau regroupant/différenciant les traits : Mélancolique, Lunatique, Possédé
+#	level = 1							# level = 1 : acquis
+										# level = 2 : génétique
+		# ex.: same_opinion = 10 > Opinion pour le groupe de trait en commun (possédé): +10
+
+	
+#	flag = no_message		# Permettrait d'éviter l'affichage d'un message lors de l'acquisition ou de la perte de ce trait
+							# ex.: Enceinte, Blessé
+	potential = {} 		# 
+	
+	List of triggers which are required for a character to get this trait. 
+	# >>>[GENETIQUE - STATISTIQUES]:
+	birth = 0.0
+	random_creation = 0.0
+	inherit_chance = 100	# Peut être hérité
+	both_parent_has_trait_inherit_chance = 100
+	minimum_age = 0
+#	maximum_age = 15
+	
+	# >>>[GENETIQUE - CONDITIONS]:
+	genetic = no			# Ce trait est congénital
+	valid_sex = female
+	child_inheritance_sex = female
+	parent_inheritance_sex = all	
+	inherit_from_real_father = yes
+	
+	enables_inbred = no
+	inbreeding_chance = -0.50	# Probabilité de consanguinité: -50%
+	
+	# >>>[STATISTIQUES]:
+	
+	health = 0.25			# 3		Santé: bonus divin
+							# 2		Santé: bonus énorme
+							# 1		Santé: gros bonus
+							# 0.5 	Santé: bonus moyen
+							# 0.25 	Santé: petit bonus
+							# -0.25	Santé: pénalité mineure
+							# -0.5 	Santé: pénalité moyenne
+							# -1	Santé: pénalité grave
+							# -3	Santé: pénalité critique
+							# -4	Santé: pénalité catastrophique
+	life_expectancy = 3		# Espérance de vie (années): +5
+	
+	incapacitating = no		# Nécessité d'un régent ? (CK2 Source)
+#	flag = can_not_marry	# Ne peut pas se marier
+	
+	fertility = 0.25		# Fécondité: +25%
+	can_have_children = yes	# no: Ne peut pas avoir d'endant
+	
+	can_inherit = yes		# no: Ne peut pas hériter de titre
+	can_inherit_from_dynasty = yes	
+	illegitimate_bastard = no
+	legitimate_bastard = yes
+	blocks_from_claim_inheritance = no	#yes: ne peut pas revendiquer d'héritage
+	blocks_from_claim_inheritance_from_dynasty = no
+	
+
+ 	stress_gain_mult = 0.0
+	stress_loss_mult = 0.0				# Perte de stress : +20% (ex.: Hashishiyah, Reclus, Irritable)
+	negate_health_penalty_add = 0.0
+	
+	diplomacy = 1
+	martial = 3
+	stewardship = 0
+	learning = 0
+	prowess = 3
+	
+	# >>>[STATISTIQUES - REVENUS]:
+	monthly_income_mult = 0.0		# Revenu mensuel : -10%	
+	monthly_income_per_stress_level_mult = 0.0
+
+	monthly_prestige = 0.0			# Prestige : +0.5/mois
+	monthly_prestige_gain_mult = 0.0
+	
+	monthly_piety = 0.0					# Piété mensuelle: +10% (ex.: Pèlerin)
+	monthly_piety_gain_mult = 0.0
+
+	monthly_lifestyle_xp_gain_mult = -0.0				# Expérience mensuelle de mode de vie: -10% (ex.: Lent)
+
+	# >>>[DIPLOMACY]:
+	monthly_diplomacy_lifestyle_xp_gain_mult = 0.0
+	diplomacy_per_prestige_level = 0			# Diplomatie par niveau de gloire: +1
+	short_reign_duration_mult = -0.0			# Durée du court règne: -25%
+	learn_language_scheme_power_mult = 0.0		# Puissance du complot à apprendre la langue : +X%
+	ignore_negative_culture_opinion = no		# Ignore l'opinion négative liée à la culture: Oui
+	ignore_negative_opinion_of_culture = no		# Pas d'opinion négative des autres cultures: Oui
+#	flag = join_factions_less					# Moins susceptible de rejoindre des factions contre son seigneur lige (ex.: Loyal)
+#	flag = join_factions_more					# Plus susceptible de rejoindre des factions contre son seigneur lige
+	
+	# >>>[MARTIAL/COMMANDEMENT]:
+	monthly_martial_lifestyle_xp_gain_mult = 0.03
+	martial_per_prestige_level = 1				# Martialité par niveau de gloire: +1 (ex.: Aventurier)
+	prowess_per_prestige_level = 1				# Prouesse par niveau de gloire: +1 (ex.: Aventurier)
+	
+	add_commander_trait = yes
+	disables_combat_leadership = no		# ex.: Blessé (Wounded)
+	
+	levy_size = 0.0
+	army_maintenance_mult = -0.5				# Maintenance de l'armée en or: -50.00% (ex.: Le plus grand des khans)
+	men_at_arms_maintenance = -0.5				# Maintenance des hommes d'armes: -50.00% (ex.: Aventurier)
+	
+	supply_duration = 0.0						# Durée de l'approvisionnement: +100% (ex.: Logisticien)
+	siege_phase_time = -0.0						# Durée de la phase de siège: -30% (ex.: Ingénieur militaire)
+	attacker_advantage = 30						# Avantage attaquant: +30
+	defender_advantage = 15						# Avantage défenseur: +15
+	enemy_hard_casualty_modifier = 0.70			# Soldats morts ennemis: +25% (ex.: Attaquant agressif)
+	hard_casualty_modifier = -0.30				# Soldats morts amis: -25% (ex.: Défenseur inflexible)
+	no_water_crossing_penalty = no				# Traverse fleuves et détroits sans pénalité d'avantage: Oui (ex.: Traverseur au gué)
+	enemy_terrain_advantage = -0.3				# Avantage défensif ennemi: -50% (ex.: Commandant polyvalent)
+	
+	plains_advantage = 3						# Avantage dans les plaines: +4 (ex.: Expert en terrain ouvert)
+	farmlands_advantage = 3						# Avantage dans les terres arables: +4 (ex.: Expert en terrain ouvert)
+	steppe_advantage = 3						# Avantage dans les steppes: +4 (ex.: Expert en terrain ouvert)
+	mountains_advantage = 3						# Avantage dans les montagnes: +4 (ex.: Expert en terrain difficile)
+	hills_advantage = 1							# Avantage dans les collines: +4 (ex.: Expert en terrain difficile)
+	wetlands_advantage = 0						# Avantage dans les marécages: +4 (ex.: Expert en terrain difficile)
+	forest_advantage = 4						# Avantage en forêt: +5 (ex.: Combattant des forêts)
+	taiga_advantage = 3							# Avantage dans la taïga: +5 (ex.: Combattant des forêts)
+	desert_advantage = 0						# Avantage dans le désert: +5 (ex.: Guerrier du désert)
+	drylands_advantage = 0						# Avantage en terres arides: +5 (ex.: Guerrier du désert)
+	desert_mountains_advantage = 0				# Avantage dans les montagnes désertiques: +5 (ex.: Guerrier du désert)
+	oasis_advantage = 0							# Avantage dans les oasis: +5 (ex.: Guerrier du désert)
+	jungle_advantage = 0						# Avantage dans la jungle: +6 (ex.: Expert de la jungle)	
+	winter_advantage = 6						# Avantage dans les comtés affectés par l'hiver: +6 (ex.: Soldat hivernal)
+	
+	desert_cancel_negative_supply = no				# Pénalité de limite d'approvisionnement dans le désert annulée: Oui (ex.: Guerrier du désert)
+	desert_mountains_cancel_negative_supply = no	# Pénalité de limite d'approvisionnement dans les montagnes désertiques annulée: Oui (ex.: Guerrier du désert)
+	oasis_cancel_negative_supply = no				# Pénalité de limite d'approvisionnement dans les oasis annulée: Oui (ex.: Guerrier du désert)
+	jungle_cancel_negative_supply = no				# Pénalité de limite d'approvisionnement dans la jungle annulée: Oui (ex.: Expert de la jungle)
+	
+	hostile_county_attrition = -0.0				# Attrition en compté hostile: -75% (ex.: Pillard)
+	desert_attrition_mult = -0.0				# Attrition subie dans le désert: -50% (ex.: Guerrier du désert)
+	desert_mountains_attrition_mult = -0.0		# Attrition subie dans les montagnes désertiques: -50% (ex.: Guerrier du désert)
+	oasis_attrition_mult = -0.0					# Attrition subie dans les oasis: -50% (ex.: Guerrier du désert)
+	jungle_attrition_mult = -0.0				# Attrition subie dans la jungle: -50% (ex.: Expert de la jungle)
+	
+	movement_speed = 0.3						# Vitesse de déplacement: +25% (ex.: Organisateur)
+	winter_movement_speed = 0.0					# Vitesse de déplacement dans les comtés affectés par l'hiver: +25% (ex.: Soldat hivernal)
+	retreat_losses = -0.3						# Pertes pendant la phase de retraire: -20% (ex.: Organisateur)
+	
+	max_combat_roll = 0							# Jet de dé de la bataille maximum: +6 (ex.: Téméraire)
+	min_combat_roll = 0							# Jet de dé de la bataille minimum: -2 (ex.: Commandant prudent)
+	desert_max_combat_roll = 0					# Jet de dé de la bataille maximum dans le désert: +5 (ex.: Guerrier du désert)
+	desert_min_combat_roll = 0					# Jet de dé de la bataille minimum dans le désert: +1 (ex.: Guerrier du désert)
+	
+	heavy_infantry_siege_value_add = 0.1		# Progression du siège d'infanterie lourde: +0.1
+	pikemen_siege_value_add = 0.1				# Progression du siège d'infanterie lourde: +0.1
+	skirmishers_siege_value_add = 0.1			# Progression du siège d'infanterie lourde: +0.1
+	archers_siege_value_add = 0.1				# Progression du siège d'infanterie lourde: +0.1
+	light_cavalry_siege_value_add = 0.1			# Progression du siège d'infanterie lourde: +0.1 (ex.: Le plus grand des khans)
+	archer_cavalry_siege_value_add = 0.1		# Progression du siège d'infanterie lourde: +0.1 (ex.: Le plus grand des khans)
+	siege_weapon_siege_value_add = 0.1			# (?) siege_weapon_siege_value_add: +0.1 
+	heavy_cavalry_siege_value_add = 0.1			# (?) heavy_cavalry_siege_value_add: +0.1
+	
+	tolerance_advantage_mod = 0					# Avantage de l'hostilité envers la foi: +10 (ex.: Guerrier saint)
+	raid_speed = 0.0							# Vitesse de pillage: +100% (ex.: Pillard)
+	trait_winter_exclusive = no					# ? > Propre au trait Soldat hivernal (winter_soldier)
+	
+	
+	
+	advantage_against_coreligionists = 0		# Avantage contre les coreligionnaires: +5 (ex.: Hérésiarque)
+	enemy_hard_casualty_modifier = 0.00
+	
+	flag = higher_chance_of_dying_in_battle
+#	flag = lower_chance_of_dying_in_combat
+#	flag = can_duel_criminals_interaction
+#	flag = can_duel_anyone_interaction			# Déverrouille l'interaction Libérer votre colère (permet de défier en duel quiconque lorsque stressé) # ex.: Irritable
+
+	# >>>[INTENDANCE]:
+	monthly_stewardship_lifestyle_xp_gain_mult = 0.0
+	vassal_limit = 0							# Limite de vassaux: +75 (ex.: Le plus grand des khans)
+	development_growth_factor = 0.0				# Croissance du développement: +20%
+	monthly_county_control_change_factor = 0.0	# Augmentation du contrôle: +50% (ex.: Saint monarque)
+	build_speed = -0.0
+	build_gold_cost = -0.0
+	holding_build_speed = -0.0
+	holding_build_gold_cost = -0.0
+	tax_mult = +0.00
+#	flag = can_improve_capital_decision
+	
+	# >>>[INTRIGUE]:
+	monthly_intrigue_lifestyle_xp_gain_mult = 0.0
+	owned_hostile_scheme_success_chance_add = 0 	# Integer
+	owned_personal_scheme_success_chance_add = 0 	# Integer
+	seduce_scheme_power_add = 0						# Integer	
+	owned_scheme_secrecy_add = -10
+
+	hostile_scheme_power_mult = 0.0
+	personal_scheme_power_mult = 0.0
+ 	seduce_scheme_power_mult = 0.0
+	learn_language_scheme_power_mult = 0.0
+
+	hostile_scheme_resistance_add = 0				# Integer
+	hostile_scheme_resistance_mult = 0.0			# Résistance au complot hostile: +10% (ex.: Lunatique)
+	enemy_hostile_scheme_success_chance_add = -0		# Probabilité de réussite ennemie du complot hostile: -25% (ex.: Le plus grand des khans)
+	enemy_personal_scheme_success_chance_add = 0	# Integer
+
+	scheme_discovery_chance_mult = 0.0
+	
+#	flag = can_improve_hostile_schemes_decision
+#	flag = can_accelerate_schemes_decision
+#	flag = can_dismiss_hooks_interaction
+#	flag = can_murder_own_children
+#	flag = can_fabricate_hooks_on_rivals		 	# Enables the fabricate hook scheme against rivals
+#	flag = extra_scheme_power_vs_rivals				# +15 Hostile scheme success chance against rivals
+#	flag = can_abandon_hooks_interaction			# Enables the Abandon Hook interaction (from forgiving trait)
+
+	# >>>[LEARNING]:
+	monthly_learning_lifestyle_xp_gain_mult = 0.0	# Expérience mensuelle de mode de vie d'érudition: +10%
+	faith_conversion_piety_cost_mult = -0.0
+
+	# >>>[OPINION]:
+	general_opinion = 30			# Integer	
+	same_opinion = 0				# Integer	
+	opposite_opinion = 0			# Integer	
+	
+	dynasty_house_opinion = 0		# Integer # House Opinion
+	close_relative_opinion = 0		# Integer # Close family opinion
+	twin_opinion = 0				# Opinion de la part du jumeau: +15
+
+	independent_ruler_opinion = 0	# Integer
+	tribal_government_opinion = 50	# Opinion de dirigeant tribal: +10
+	liege_opinion = 0				# Opinion de la part du seigneur lige: +15
+	opinion_of_liege = 0			# Integer
+	vassal_opinion = 0				# Opinion de vassal: -10
+	opinion_of_vassal = 0			# Integer
+	religious_vassal_opinion = 0	# Opinion de vassal religieux: +20 (ex.: Paragon de vertu)	
+	clergy_opinion = 0				# Opition du clergé: X
+	county_opinion_add = 30			# Opinion populaire: +30 (ex.: Meneur de paysans)	
+	
+	courtier_and_guest_opinion = 0	# Integer
+	prisoner_opinion = 0			# Integer
+	same_faith_opinion = 0			# Opinion pour la même foi: +5 (ex.: Pèlerin)
+	opinion_of_different_faith = 0	# Integer
+	same_opinion_if_same_faith = 0	# Opinion pour le trait (___) et la foi en commun: +15
+	islam_religion_opinion = 0		# Opinion musulmane: +5 (ex.: Sayyid)
+			# Fonctionne avec toute les religions (?) :
+				# ex.: zoroastrianism_religion_opinion = +10
+				# ex.: jainism, hinduism, buddhism, etc.
+	same_culture_opinion = 25		# Opinion pour la même culture: +25 (ex.: Le plus grand des khans)
+
+	attraction_opinion = 30			# Opinion pour l'attirance: +10
+	
+	tyranny_gain_mult = -0.2
+	dread_baseline_add = 0		# Redoutabilité naturelle : -10 (ex.: Blessé)
+	dread_gain_mult = 0.0		# Gain de redoutabilité : +10% (ex.: Irritable)
+	dread_decay_mult = 0.0		# Déclin de la redoutabilité : -50% (ex.: Le plus grand des khans)
+	dread_loss_mult = 0.0		# Perte de redoutabilité : +50% (ex.: Blessé)
+
+
+	# >>>[COMPORTEMENT IA]:
+	ai_rationality = 0
+	ai_energy = 30
+	ai_honor = 0
+	ai_boldness = 30
+	ai_greed = 0
+	ai_vengefulness = 15 
+	ai_zeal = 0
+	ai_sociability = 0
+	ai_compassion = 0
+	
+	ai_war_chance = +0.5
+	ai_war_cooldown = -0.5
+	
+	ai_amenity_target_baseline =0
+	ai_amenity_spending = 0
+
+	# Valeurs possibles : nombre ou ...
+	# 	dominant_positive/negative_ai_value = 	+/- 200
+	# 	very_high_positive/negative_ai_value = 	+/-  75
+	# 	high_positive/negative_ai_value = 		+/-  50
+	# 	medium_positive/negative_ai_value = 	+/-  35
+	# 	low_positive/negative_ai_value = 		+/-  20
+	# 	very_low_positive/negative_ai_value = 	+/-  10
+
+	
+	# >>>[GFX/PORTRAIT/PHYSIQUE]:
+	genetic_constraInteger_all = beauty_3			# beauty_1 / beauty_2
+	genetic_constraInteger_men = male_beauty_3		# male_beauty_1 / male_beauty_2
+	genetic_constraInteger_women = female_beauty_3	# female_beauty_1 / female_beauty_2
+	
+#	portrait_extremity_shift = 0.1	# When gaining this trait, every single morph gene will be shifted by this percentage towards 0 or 1; whichever it is closest to. E.G., 0.4 will shift 25% towards 0, resulting in 0.3 
+										# Traits beauty_bad_1 = 0.1
+										# Traits beauty_bad_2 = 0.18
+										# Traits beauty_bad_3 = 0.27
+										
+#	ugliness_portrait_extremity_shift = 0.4		# Patch 1.2 : Added ugliness_portrait_extremity_shift system for more believable ugliness
+										# Traits beauty_bad_1 = 0.4
+										# Traits beauty_bad_2 = 0.6
+										# Traits beauty_bad_3 = 0.8
+										
+	portrait_pose = {
+#		ex.: 	name = "test_pose_brave"
+#				score = 10
+#		ex.:	name = "test_pose_greedy"
+#				score = 10
+	}
+	
+	
+	# >>>[COMPATIBILITE]:
+	compatibility = {
+		# ex.: brave = @pos_compat_high
+			# 			@pos_compat_high = 30
+			#			@pos_compat_medium = 15
+			#			@pos_compat_low = 5
+			#			@neg_compat_low = -5
+			#			@neg_compat_medium = -15
+			#			@neg_compat_high = -30
+	}
+	opposites = {
+		beauty_bad
+		weak
+		physique_bad
+	}
+	
+	# >>>[MODIFIER]:
+	culture_modifier = {
+		# ex.:	parameter = poorly_educated_leaders_distrusted
+		#		feudal_government_opinion = -10
+	}
+#	culture_succession_prio = children_can_be_born_in_the_purple	# ex.: Né dans la pourpre (born_in_the_purple)
+	
+	# >>>[RULER DESIGNER]:
+	shown_in_ruler_designer = yes
+	ruler_designer_cost = 400
+#	shown_in_encyclopedia = no
+
+	# >>>[LOCALIZATION/DESCRIPTION]:
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_mon_trait_test_desc
+			}
+			desc = trait_mon_trait_test_character_desc
+		}
+	}
+	
+# >>>[END] ####
+}
